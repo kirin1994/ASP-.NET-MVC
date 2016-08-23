@@ -34,7 +34,7 @@ namespace MvcProject.Controllers
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = DateTime.Parse(string.Format("{0} {1}", ViewModel.Date, ViewModel.Time)),
+                DateTime = ViewModel.DateTime,
                 GenreId = ViewModel.Genre,
                 Venue = ViewModel.Venue
             };
