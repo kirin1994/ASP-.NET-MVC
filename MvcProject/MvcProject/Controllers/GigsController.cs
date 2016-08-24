@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using MvcProject.Models;
 using MvcProject.ViewModels;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -30,11 +29,17 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel ViewModel)
         {
-          
+            if (!ModelState.IsValid)
+            {
+                ViewModel.Genres = _context.Genres.ToList();
+                return View("Create", ViewModel);
+            }
+                
+
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = ViewModel.DateTime,
+                DateTime = ViewModel.GetDateTime(),
                 GenreId = ViewModel.Genre,
                 Venue = ViewModel.Venue
             };
