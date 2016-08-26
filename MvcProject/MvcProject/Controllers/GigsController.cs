@@ -27,6 +27,7 @@ namespace MvcProject.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel ViewModel)
         {
             if (!ModelState.IsValid)
