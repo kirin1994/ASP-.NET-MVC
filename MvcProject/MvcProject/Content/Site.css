@@ -27,6 +27,13 @@ span.field-validation-error {
     font-weight: bold;
 }
 
+.voffset {margin-top: 2px;}
+.voffset1 {margin-top: 5px;}
+.voffset2 {margin-top: 10px;}
+.voffset3 {margin-top: 20px;}
+.voffset4 {margin-top: 40px;}
+.voffset5 {margin-top: 80px;}
+
 /*Bootstrap Overrides*/
 
 .navbar-inverse {
@@ -93,14 +100,14 @@ h6,
 }
 .form-control  :focus{
     border-color: #2196f3;
-    box-shadow:none;
+    box-shadow: none;
     -webkit-box-shadow: none;
 
 }
 
 .btn{
-    font-size: 17px;
-    padding: 7px 20px;
+    /*font-size: 17px;
+    padding: 7px 20px;*/
     -ms-border-radius: 9px;
     border-radius: 9px;
 }
@@ -134,17 +141,17 @@ h6,
 .gigs >li .date .day {
     background: #f7f7f7;
     color: #333;
-    font-size: 20;
+    font-size: 20px;
     padding: 6px 12px;
 }
-.gigs >li .details{
+.gigs >li .details {
     position: absolute;
     top: 0;
     left: 70px;
 
 }
 
-    .gigs > li .details .artist {
+.gigs > li .details .artist {
         font-weight: bold;
         display: block;
 }
@@ -152,3 +159,4 @@ h6,
 .gigs > li .details .genre {
     font-size: 15px;
 }
+
